@@ -1,0 +1,128 @@
+[
+ {
+  "createdAt": "7/22/2023, 9:04:08 PM",
+  "createdById": "1",
+  "quizSettings": {
+   "quizName": "Basic Computing",
+   "quizCategory": "Computer",
+   "quizDescription": "The section contains Computer Fundamental multiple choice questions and answers on input and output units, storage unit, control unit, arithmetic and logic unit."
+  },
+  "quizQuestions": [
+   {
+    "id": 1690039483528,
+    "questionText": "Who is the father of Computers?",
+    "answerOptions": [
+     {
+      "id": 1690039502107,
+      "answerText": "James Gosling",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039518383,
+      "answerText": "Charles Babbage",
+      "isAnswer": true
+     },
+     {
+      "id": 1690039535037,
+      "answerText": "Dennis Ritchie",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039550073,
+      "answerText": "Bjarne Stroustrup",
+      "isAnswer": false
+     }
+    ],
+    "points": 5,
+    "explanation": "Charles Babbage is known as the father of computers. Charles Babbage designed and built the first mechanical computer and Difference Engine."
+   },
+   {
+    "id": 1690039573195,
+    "questionText": "Which of the following is the correct abbreviation of COMPUTER?",
+    "answerOptions": [
+     {
+      "id": 1690039608772,
+      "answerText": "Commonly Occupied Machines Used in Technical and Educational Research",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039624660,
+      "answerText": "Commonly Operated Machines Used in Technical and Environmental Research",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039638162,
+      "answerText": "Commonly Oriented Machines Used in Technical and Educational Research",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039656936,
+      "answerText": "Commonly Operated Machines Used in Technical and Educational Research",
+      "isAnswer": true
+     }
+    ],
+    "points": 5,
+    "explanation": "The word COMPUTER is an abbreviation for the terms “Commonly Operated Machines Used in Technical and Educational Research”. The word COMPUTER also relates to the word COMPUTE which means to calculate. So initially, it was thought that a computer is a device that is used to perform calculations."
+   },
+   {
+    "id": 1690039676708,
+    "questionText": "Which of the following is the correct definition of Computer?",
+    "answerOptions": [
+     {
+      "id": 1690039718430,
+      "answerText": "Computer is a machine or device that can be programmed to perform arithmetical or logic operation sequences automatically",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039736416,
+      "answerText": "Computer understands only binary language which is written in the form of 0s & 1s",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039749941,
+      "answerText": "Computer is a programmable electronic device that stores, retrieves, and processes the data",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039765515,
+      "answerText": "All of the mentioned",
+      "isAnswer": true
+     }
+    ],
+    "points": 5,
+    "explanation": "A computer is a machine or device that can be programmed to perform arithmetical or logic operation sequences automatically. The computer understands only binary codes (0s & 1s)."
+   },
+   {
+    "id": 1690039886323,
+    "questionText": "What is the full form of CPU?",
+    "answerOptions": [
+     {
+      "id": 1690039922404,
+      "answerText": "Computer Processing Unit",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039935119,
+      "answerText": "Computer Principle Unit",
+      "isAnswer": false
+     },
+     {
+      "id": 1690039953066,
+      "answerText": "Central Processing Unit",
+      "isAnswer": true
+     },
+     {
+      "id": 1690039968704,
+      "answerText": "Control Processing Unit",
+      "isAnswer": false
+     }
+    ],
+    "points": 5,
+    "explanation": "CPU stands for Central Processing Unit. CPU is the part of a computer system that is mainly referred as the brain of the computer."
+   }
+  ],
+  "enrolledStudents": [],
+  "createdByName": "Avisek Kar",
+  "id": "1"
+ }
+]
