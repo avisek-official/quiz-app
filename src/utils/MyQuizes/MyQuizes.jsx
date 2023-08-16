@@ -8,14 +8,13 @@ import React, { useState } from "react";
 export default function MyQuizes(props) {
   const [quizesToRender, setQuizesToRender] = useState(props.myQuizes);
 
-
   // ----------------------------------------------------------------
   // #region Functions
   // ----------------------------------------------------------------
 
   const filterQuizes = (filter) => {
     let filteredQuizes = [];
-    
+
     if (!CoreUtils.isNullOrUndefined(filter.filterCategory)) {
       if (filter.filterCategory === "All") {
         if (filter.searchText.trim().length === 0) {
@@ -30,6 +29,7 @@ export default function MyQuizes(props) {
           filteredQuizes = props.myQuizes.filter(
             (quiz) => quiz.quizSettings.quizCategory === filter.filterCategory
           );
+          console.log(filteredQuizes);
         }
       }
     }
@@ -49,9 +49,11 @@ export default function MyQuizes(props) {
         );
       }
     } else {
-      filteredQuizes = props.myQuizes;
+      if (CoreUtils.isNullOrUndefined(filter.filterCategory)) {
+        filteredQuizes = props.myQuizes;
+      }
     }
-    
+
     setQuizesToRender(filteredQuizes);
   };
 
@@ -64,16 +66,16 @@ export default function MyQuizes(props) {
       )}
       {quizesToRender.length > 0
         ? quizesToRender.map((quiz, index) => {
-          return (
-            <QuizCard
-              key={index}
-              quizDetails={quiz}
-              userDetails={props.userDetails}
-              inProgress={props.inProgress}
-              completed={props.completedQuizes}
-            />
-          );
-        })
+            return (
+              <QuizCard
+                key={index}
+                quizDetails={quiz}
+                userDetails={props.userDetails}
+                inProgress={props.inProgress}
+                completed={props.completedQuizes}
+              />
+            );
+          })
         : props.userDetails.role === "Student" && <NoQuiz />}
       {props.userDetails.role === "Teacher" && <CreateQuizCard />}
     </div>
