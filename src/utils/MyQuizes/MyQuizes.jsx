@@ -52,7 +52,7 @@ export default function MyQuizes(props) {
   // #endregion Functions
 
   return (
-    <div className="flex mx-auto max-w-screen-xl pt-5 flex-wrap">
+    <div className="flex sm:flex-col mx-auto max-w-screen-xl pt-5 flex-wrap">
       {props.userDetails.role === "Student" && props.myQuizes.length > 0 && (
         <BrowseControls onControlChange={filterQuizes} />
       )}
