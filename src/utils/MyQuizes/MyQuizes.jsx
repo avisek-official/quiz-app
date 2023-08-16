@@ -15,23 +15,7 @@ export default function MyQuizes(props) {
 
   const filterQuizes = (filter) => {
     let filteredQuizes = [];
-    if (filter.searchText.trim().length > 0) {
-      if (filteredQuizes.length > 0) {
-        filteredQuizes = filteredQuizes.filter((quiz) =>
-          quiz.quizSettings.quizName
-            .toLowerCase()
-            .includes(filter.searchText.toLowerCase())
-        );
-      } else {
-        filteredQuizes = props.myQuizes.filter((quiz) =>
-          quiz.quizSettings.quizName
-            .toLowerCase()
-            .includes(filter.searchText.toLowerCase())
-        );
-      }
-    } else {
-      filteredQuizes = props.myQuizes;
-    }
+    
     if (!CoreUtils.isNullOrUndefined(filter.filterCategory)) {
       if (filter.filterCategory === "All") {
         if (filter.searchText.trim().length === 0) {
@@ -49,6 +33,25 @@ export default function MyQuizes(props) {
         }
       }
     }
+
+    if (filter.searchText.trim().length > 0) {
+      if (filteredQuizes.length > 0) {
+        filteredQuizes = filteredQuizes.filter((quiz) =>
+          quiz.quizSettings.quizName
+            .toLowerCase()
+            .includes(filter.searchText.toLowerCase())
+        );
+      } else {
+        filteredQuizes = props.myQuizes.filter((quiz) =>
+          quiz.quizSettings.quizName
+            .toLowerCase()
+            .includes(filter.searchText.toLowerCase())
+        );
+      }
+    } else {
+      filteredQuizes = props.myQuizes;
+    }
+    
     setQuizesToRender(filteredQuizes);
   };
 
