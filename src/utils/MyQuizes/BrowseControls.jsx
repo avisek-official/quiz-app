@@ -37,7 +37,7 @@ function BrowseControls(props) {
             value={filterCategory}
             onChange={(e) => setFilterCategory(e)}
           >
-            {QuizCategories.map((category, index) => (
+            {[...QuizCategories, "All"].map((category, index) => (
               <Option value={category} key={index}>
                 {category}
               </Option>

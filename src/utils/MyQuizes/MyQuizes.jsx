@@ -29,24 +29,27 @@ export default function MyQuizes(props) {
             .includes(filter.searchText.toLowerCase())
         );
       }
+    } else {
+      filteredQuizes = props.myQuizes;
     }
     if (!CoreUtils.isNullOrUndefined(filter.filterCategory)) {
-      if (filteredQuizes.length > 0) {
-        filteredQuizes = filteredQuizes.filter(
-          (quiz) => quiz.quizSettings.quizCategory === filter.filterCategory
-        );
+      if (filter.filterCategory === "All") {
+        if (filter.searchText.trim().length === 0) {
+          filteredQuizes = props.myQuizes;
+        }
       } else {
-        filteredQuizes = props.myQuizes.filter(
-          (quiz) => quiz.quizSettings.quizCategory === filter.filterCategory
-        );
+        if (filteredQuizes.length > 0) {
+          filteredQuizes = filteredQuizes.filter(
+            (quiz) => quiz.quizSettings.quizCategory === filter.filterCategory
+          );
+        } else {
+          filteredQuizes = props.myQuizes.filter(
+            (quiz) => quiz.quizSettings.quizCategory === filter.filterCategory
+          );
+        }
       }
     }
-    if (
-      filter.searchText.trim().length > 0 ||
-      !CoreUtils.isNullOrUndefined(filter.filterCategory)
-    ) {
-      setQuizesToRender(filteredQuizes);
-    }
+    setQuizesToRender(filteredQuizes);
   };
 
   // #endregion Functions
@@ -58,16 +61,16 @@ export default function MyQuizes(props) {
       )}
       {quizesToRender.length > 0
         ? quizesToRender.map((quiz, index) => {
-            return (
-              <QuizCard
-                key={index}
-                quizDetails={quiz}
-                userDetails={props.userDetails}
-                inProgress={props.inProgress}
-                completed={props.completedQuizes}
-              />
-            );
-          })
+          return (
+            <QuizCard
+              key={index}
+              quizDetails={quiz}
+              userDetails={props.userDetails}
+              inProgress={props.inProgress}
+              completed={props.completedQuizes}
+            />
+          );
+        })
         : props.userDetails.role === "Student" && <NoQuiz />}
       {props.userDetails.role === "Teacher" && <CreateQuizCard />}
     </div>
