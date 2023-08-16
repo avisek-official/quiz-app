@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CreateQuizCard() {
   return (
-    <Card className="mt-6 w-96 m-2">
+    <Card className="mt-6 w-[31%] m-2">
       <Link to={`/create`}>
         <CardBody className="flex flex-col justify-center items-center">
           <Typography variant="h5" color="blue-gray" className="mb-2">
