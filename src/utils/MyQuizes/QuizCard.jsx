@@ -56,7 +56,7 @@ export default function QuizCard(props) {
   // #endregion Functions
 
   return (
-    <Card className="mt-6 w-[31%] m-2">
+    <Card className="mt-6 w-[31%] h-fit m-2">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">
           {props.quizDetails.quizSettings.quizName}
@@ -89,7 +89,7 @@ export default function QuizCard(props) {
           className="cursor-pointer"
           onClick={() => setShowLongDesc(!showLongDesc)}
         >
-          <Typography>{showLongDesc ? quizDescLong : quizDescShort}</Typography>
+          <Typography className="text-sm">{showLongDesc ? quizDescLong : quizDescShort}</Typography>
         </span>
       </CardBody>
       <CardFooter className="pt-0">
@@ -121,7 +121,7 @@ export default function QuizCard(props) {
                 </Button>
               </Link>
               {props.completed && (
-                <Typography className="flex w-full justify-center items-center text-sm text-black">
+                <Typography className="flex w-full justify-center items-center text-xs text-black">
                   <CheckBadgeIcon color="green" className="h-6 w-6 mr-1" />{" "}
                   Submitted on {submittedDate.split(",")[0]}
                 </Typography>
