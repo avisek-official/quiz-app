@@ -56,7 +56,7 @@ export default function QuizCard(props) {
   // #endregion Functions
 
   return (
-    <Card className="mt-6 w-[31%] h-fit m-2">
+    <Card className="mt-6 w-[31%] min-w-[31%] h-fit m-2">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">
           {props.quizDetails.quizSettings.quizName}
